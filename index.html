@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="July Daniela Riaño Soto">
+  <title>Aplicación del Tiempo</title>
+
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+  <main>
+    <h1>Aplicación del Tiempo</h1>
+    <form id="formulario">
+      <input type="text" id="ciudad" placeholder="Escribe una ciudad, ej: Bogota" required>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <button type="button" id="btn-refrescar">Actualizar</button>
+
+    <!-- "Cargando..."  -->
+    <p id="mensaje"></p>
+
+    <section id="actual"></section>
+
+    <h2>Últimas 24 horas</h2>
+    <section id="pasado" class="lista-horas"></section>
+
     
+    <h2>Próximas 24 horas</h2>
+    <section id="futuro" class="lista-horas"></section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

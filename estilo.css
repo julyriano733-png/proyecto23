@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9c0e0;
+  color: #120f0f;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1f1ffa;
+}
+
+h2 {
+  margin: 20px 0 10px 0;
+  color: #f83ed9;
+}
+
+#formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#ciudad {
+  flex: 1; 
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4113ea;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #4a1af7;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #155a8f;
+}
+
+
+#mensaje {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/*MENSAJE ERROR*/
+#mensaje.error {
+  color: #b00020;
+}
+
+/* Tarjeta del clima actual */
+#actual {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Si todavía no hay datos, escondo la tarjeta vacía */
+#actual:empty {
+  display: none;
+}
+
+.condicion {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.temperatura {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1f78c1;
+  margin: 5px 0;
+}
+
+/* Las horas van en una fila con scroll hacia el lado */
+.lista-horas {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.hora {
+  min-width: 120px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hora p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.hora-titulo {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  #formulario {
+    flex-direction: column;
+  }
+}
